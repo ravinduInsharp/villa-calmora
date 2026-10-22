@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#6d845c"/>
+  <ellipse cx="980" cy="160" rx="260" ry="140" fill="#dfe6d2" opacity="0.25"/>
+  <rect x="180" y="300" width="760" height="340" fill="#f3eee4"/>
+  <rect x="180" y="268" width="760" height="34" fill="#fbf8f1"/>
+  <rect x="360" y="300" width="16" height="340" fill="#fff"/>
+  <rect x="760" y="300" width="16" height="340" fill="#fff"/>
+  <rect x="460" y="430" width="70" height="160" fill="#6d4e38"/>
+  <rect x="560" y="450" width="56" height="140" fill="#7d5b42"/>
+  <rect x="640" y="450" width="56" height="140" fill="#7d5b42"/>
+  <ellipse cx="160" cy="760" rx="180" ry="90" fill="#2a4330"/>
+  <ellipse cx="1040" cy="740" rx="200" ry="110" fill="#24382a"/>
+  <rect x="1120" y="180" width="34" height="620" rx="16" fill="#3a2c24"/>
+  <g>
+    <rect x="450" y="800" width="300" height="40" rx="20" fill="#142016" opacity="0.35"/>
+    <text x="600" y="825" text-anchor="middle" fill="#F7F4EC" font-family="Georgia, serif" font-size="15" letter-spacing="2">TEMPORARY PHOTO</text>
+  </g>
+</svg>

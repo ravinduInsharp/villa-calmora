@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <rect width="900" height="1100" fill="#4f6748"/>
+  <rect x="390" y="80" width="70" height="900" rx="30" fill="#5c4638"/>
+  <ellipse cx="420" cy="180" rx="250" ry="160" fill="#2d4632"/>
+  <ellipse cx="250" cy="320" rx="180" ry="140" fill="#3d5a3c"/>
+  <ellipse cx="680" cy="280" rx="200" ry="150" fill="#243628"/>
+  <ellipse cx="180" cy="860" rx="200" ry="140" fill="#1e3326"/>
+  <ellipse cx="700" cy="900" rx="220" ry="150" fill="#2a4030"/>
+  <rect x="300" y="980" width="300" height="36" rx="18" fill="#142016" opacity="0.35"/>
+  <text x="450" y="1004" text-anchor="middle" fill="#F7F4EC" font-family="Georgia, serif" font-size="14" letter-spacing="2">TEMPORARY PHOTO</text>
+</svg>

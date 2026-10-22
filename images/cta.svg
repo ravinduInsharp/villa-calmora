@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#e7efdf"/>
+  <ellipse cx="1180" cy="160" rx="280" ry="140" fill="#f7f4ec"/>
+  <rect x="360" y="250" width="860" height="420" fill="#f6f1e6"/>
+  <rect x="360" y="220" width="860" height="34" fill="#fbf8f1"/>
+  <rect x="560" y="250" width="16" height="420" fill="#fff"/>
+  <rect x="980" y="250" width="16" height="420" fill="#fff"/>
+  <rect x="700" y="390" width="64" height="180" fill="#6d4e38"/>
+  <ellipse cx="200" cy="760" rx="220" ry="120" fill="#6d845c" opacity="0.45"/>
+  <ellipse cx="1240" cy="700" rx="180" ry="100" fill="#8aa678" opacity="0.4"/>
+  <rect x="900" y="800" width="280" height="34" rx="17" fill="#f7f4ec" opacity="0.9"/>
+  <text x="1040" y="822" text-anchor="middle" fill="#35462D" font-family="Georgia, serif" font-size="13" letter-spacing="2">TEMPORARY PHOTO</text>
+</svg>

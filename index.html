@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Villa Calmora | A Serene Nature Retreat</title>
+    <meta
+      name="description"
+      content="Villa Calmora is a private villa near Vijaya Beach, Unawatuna, Sri Lanka. A tranquil retreat surrounded by nature, designed for slower days."
+    />
+    <meta property="og:title" content="Villa Calmora | A Serene Nature Retreat" />
+    <meta
+      property="og:description"
+      content="A tranquil villa retreat surrounded by nature, near Vijaya Beach, Unawatuna."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#F7F4EC" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="header" id="top">
+      <div class="header__inner">
+        <a class="brand" href="#home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 28V14.5" stroke="currentColor" stroke-width="1.4" fill="none" />
+            <path d="M16 16c-4.2-1.2-8.4-5.2-7.4-8.6 3.4 1.8 6.2 4.8 7.4 8.6Z" fill="currentColor" />
+            <path d="M16 15.2c4.2-1.5 8.6-4.8 9-8.2-3.8 1.3-7.2 4.4-9 8.2Z" fill="currentColor" opacity="0.8" />
+            <path d="M16 17.4c-1.4-4.6-1-8.6.2-11.2-2.6 2.4-3.4 6.4-.2 11.2Z" fill="currentColor" opacity="0.65" />
+          </svg>
+          <span>Villa Calmora</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#villa">The Villa</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn--fill nav__book" href="#contact">Book Now <span class="arrow" aria-hidden="true"></span></a>
+        </nav>
+
+        <a class="btn btn--fill header__book" href="#contact">Book Now <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="hero__media">
+          <img
+            data-image="hero"
+            src="images/hero.svg"
+            alt="Temporary photo of the villa exterior"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="hero__shade"></div>
+        </div>
+        <div class="container hero__content">
+          <p class="eyebrow eyebrow--light">A place to</p>
+          <h1>Relax<br />Unwind<br />Belong</h1>
+          <p class="hero__text">
+            A tranquil villa retreat surrounded by nature, designed for slower days and deeper connections.
+          </p>
+          <a class="btn btn--ghost" href="#contact">Book Your Stay <span class="arrow" aria-hidden="true"></span></a>
+        </div>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+            </defs>
+            <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="0.8" />
+            <text>
+              <textPath href="#sealPath">YOUR PRIVATE ESCAPE · IN NATURE ·&nbsp;</textPath>
+            </text>
+            <g fill="none" stroke="#fff" stroke-width="1.2" stroke-linejoin="round">
+              <path d="M100 112 V86" />
+              <path d="M100 96c-8-2-16-10-14-16 7 3 12 9 14 16Z" fill="#fff" stroke="none" />
+              <path d="M100 94c8-3 17-9 18-16-8 2-14 8-18 16Z" fill="#fff" stroke="none" />
+              <path d="M100 98c-2-9-1-16 1-20-5 4-6 12-1 20Z" fill="#fff" stroke="none" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container about__grid">
+          <div class="about__copy">
+            <p class="eyebrow">About Us</p>
+            <h2 class="display">More Than<br />A Stay</h2>
+            <p class="lede">
+              Villa Calmora is a peaceful retreat, designed for those who seek comfort, privacy, and a deeper
+              connection with nature. Here, you're not just a guest — you're home.
+            </p>
+            <a class="btn btn--line" href="#about">Our Story <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+
+          <div class="about__visual">
+            <svg class="sprig" viewBox="0 0 90 300" aria-hidden="true">
+              <path d="M48 292C50 200 42 120 52 16" fill="none" stroke="#8b9a7c" stroke-width="1.2" />
+              <path d="M52 58c28-8 40-28 36-42-18 10-30 28-36 42Z" fill="#9aab88" />
+              <path d="M50 108C22 98 8 74 14 58c20 12 32 34 36 50Z" fill="#738468" />
+              <path d="M52 158c30-6 44-32 38-48-20 12-34 34-38 48Z" fill="#a3b492" />
+              <path d="M48 208C18 200 4 174 12 158c20 14 32 34 36 50Z" fill="#6e8064" />
+              <path d="M50 252c26-2 40-24 34-40-18 12-30 30-34 40Z" fill="#8ea184" />
+            </svg>
+            <figure class="arch media">
+              <img
+                data-image="bedroom"
+                src="images/bedroom.svg"
+                alt="Temporary photo of the bedroom"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
+          <aside class="about__aside">
+            <p class="script">A home in nature</p>
+            <ul class="features">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M16 26V14" fill="none" stroke="currentColor" stroke-width="1.3" />
+                  <path d="M16 16c-6-2-11-7-10-11 5 2 8 6 10 11Z" fill="none" stroke="currentColor" stroke-width="1.3" />
+                  <path d="M16 15c6-2 11-6 12-10-5 1.5-9 5-12 10Z" fill="none" stroke="currentColor" stroke-width="1.3" />
+                </svg>
+                <span>Peaceful<br />Surroundings</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <circle cx="16" cy="16" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3" />
+                  <path d="M16 5v3.2M16 23.8V27M5 16h3.2M23.8 16H27M8.2 8.2l2.2 2.2M21.6 21.6l2.2 2.2M23.8 8.2l-2.2 2.2M10.4 21.6l-2.2 2.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+                </svg>
+                <span>Modern<br />Comforts</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M6 15.5 16 7l10 8.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" />
+                  <path d="M9 14.5V25h14V14.5" fill="none" stroke="currentColor" stroke-width="1.3" />
+                  <path d="M14 25v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.3" />
+                </svg>
+                <span>A True<br />Home Away</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section villa" id="villa">
+        <div class="container">
+          <div class="villa__head">
+            <div>
+              <p class="eyebrow">The Villa</p>
+              <h2 class="display">Modern Living<br />in Natural Harmony</h2>
+            </div>
+            <div class="villa__intro">
+              <p class="lede">
+                Thoughtfully designed spaces, warm details and a calming atmosphere — everything you need for a
+                memorable stay.
+              </p>
+              <a class="btn btn--line" href="#spaces">Explore the Villa <span class="arrow" aria-hidden="true"></span></a>
+            </div>
+          </div>
+
+          <div class="cards" id="spaces">
+            <article class="card">
+              <div class="media">
+                <img
+                  data-image="bedroom"
+                  src="images/bedroom.svg"
+                  alt="Temporary photo of the bedroom"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Comfortable Bedroom</h3>
+              <p>Rest in style and tranquility.</p>
+            </article>
+            <article class="card">
+              <div class="media">
+                <img
+                  data-image="interior"
+                  src="images/interior.svg"
+                  alt="Temporary photo of the interior"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Welcoming Interiors</h3>
+              <p>Thoughtful spaces for togetherness.</p>
+            </article>
+            <article class="card">
+              <div class="media">
+                <img
+                  data-image="bathroom"
+                  src="images/bathroom.svg"
+                  alt="Temporary photo of the bathroom"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Modern Bathroom</h3>
+              <p>Clean, elegant and refreshing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <div class="container experience__grid">
+          <div class="experience__copy">
+            <p class="eyebrow eyebrow--light">Experience</p>
+            <h2 class="display display--light">Moments<br />That Matter</h2>
+            <p class="lede lede--light">
+              From peaceful mornings to relaxed evenings, Villa Calmora offers a setting for the simple moments that
+              stay with you.
+            </p>
+            <a class="btn btn--ghost" href="#gallery">View Gallery <span class="arrow" aria-hidden="true"></span></a>
+          </div>
+          <div class="mosaic">
+            <div class="media">
+              <img
+                data-image="exterior"
+                src="images/exterior.svg"
+                alt="Temporary photo of the villa porch"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="media">
+              <img
+                data-image="garden"
+                src="images/garden.svg"
+                alt="Temporary photo of the garden"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="media">
+              <img
+                data-image="plants"
+                src="images/plants.svg"
+                alt="Temporary photo of the garden planting"
+                width="900"
+                height="1100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="container">
+          <div class="gallery__head">
+            <p class="eyebrow">Gallery</p>
+            <h2 class="display">Quiet Corners</h2>
+          </div>
+          <div class="gallery__grid">
+            <button class="gallery__item" type="button" data-caption="Comfortable Bedroom">
+              <span class="media">
+                <img data-image="bedroom" src="images/bedroom.svg" alt="Temporary photo of the bedroom" width="1200" height="900" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">Comfortable Bedroom</span>
+            </button>
+            <button class="gallery__item" type="button" data-caption="Welcoming Interiors">
+              <span class="media">
+                <img data-image="interior" src="images/interior.svg" alt="Temporary photo of the interior" width="1200" height="900" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">Welcoming Interiors</span>
+            </button>
+            <button class="gallery__item" type="button" data-caption="Modern Bathroom">
+              <span class="media">
+                <img data-image="bathroom" src="images/bathroom.svg" alt="Temporary photo of the bathroom" width="1200" height="900" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">Modern Bathroom</span>
+            </button>
+            <button class="gallery__item" type="button" data-caption="The Porch">
+              <span class="media">
+                <img data-image="exterior" src="images/exterior.svg" alt="Temporary photo of the villa porch" width="1200" height="900" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">The Porch</span>
+            </button>
+            <button class="gallery__item" type="button" data-caption="Garden">
+              <span class="media">
+                <img data-image="garden" src="images/garden.svg" alt="Temporary photo of the garden" width="900" height="1100" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">Garden</span>
+            </button>
+            <button class="gallery__item" type="button" data-caption="Garden Planting">
+              <span class="media">
+                <img data-image="plants" src="images/plants.svg" alt="Temporary photo of the garden planting" width="900" height="1100" loading="lazy" decoding="async" />
+              </span>
+              <span class="gallery__caption">Garden Planting</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <svg class="cta__leaves" viewBox="0 0 520 420" aria-hidden="true">
+          <path d="M40 400C90 260 70 140 120 40" fill="none" stroke="#8ea184" stroke-width="1.4" />
+          <path d="M118 90c70-20 120-10 150-50-40 40-90 60-150 70Z" fill="#a3b494" />
+          <path d="M110 170C40 140 10 90 30 40c40 50 70 90 80 130Z" fill="#7d9170" />
+          <path d="M130 250c90-10 140-50 160-110-60 40-110 70-160 90Z" fill="#b7c4a6" />
+          <path d="M80 320C20 300 0 250 20 200c40 40 60 80 60 120Z" fill="#6f8464" />
+          <path d="M150 340c80 10 140-20 170-70-70 20-120 40-170 60Z" fill="#93a686" />
+          <path d="M220 390C300 360 360 300 390 230c-70 20-130 70-170 160Z" fill="#c5d0b8" />
+        </svg>
+        <div class="cta__photo" aria-hidden="true">
+          <img data-image="cta" src="images/cta.svg" alt="" width="1400" height="900" loading="lazy" decoding="async" />
+        </div>
+        <div class="container cta__content">
+          <p class="eyebrow">Ready for your getaway</p>
+          <h2 class="display" id="cta-title">Your Private Escape<br />Awaits</h2>
+          <a class="btn btn--fill" href="#contact">Book Your Stay <span class="arrow" aria-hidden="true"></span></a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact__grid">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 class="display">Begin Your Stay</h2>
+            <p class="lede">Near Vijaya Beach, Unawatuna, Sri Lanka.</p>
+            <p class="contact__note">Share a few details and we will be in touch about your dates.</p>
+          </div>
+          <form class="form" id="enquiry" novalidate>
+            <div class="form__row">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+            </div>
+            <label>
+              <span>Preferred dates</span>
+              <input name="dates" type="text" autocomplete="off" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4"></textarea>
+            </label>
+            <button class="btn btn--fill" type="submit">Send Message <span class="arrow" aria-hidden="true"></span></button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <a class="brand" href="#home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 28V14.5" stroke="currentColor" stroke-width="1.4" fill="none" />
+            <path d="M16 16c-4.2-1.2-8.4-5.2-7.4-8.6 3.4 1.8 6.2 4.8 7.4 8.6Z" fill="currentColor" />
+            <path d="M16 15.2c4.2-1.5 8.6-4.8 9-8.2-3.8 1.3-7.2 4.4-9 8.2Z" fill="currentColor" opacity="0.8" />
+          </svg>
+          <span>Villa Calmora</span>
+        </a>
+        <p>Near Vijaya Beach, Unawatuna</p>
+        <p>© 2026 Villa Calmora</p>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Gallery image">
+      <button class="lightbox__close" type="button" aria-label="Close gallery">
+        <span aria-hidden="true"></span>
+      </button>
+      <button class="lightbox__nav lightbox__prev" type="button" aria-label="Previous image"></button>
+      <figure class="lightbox__frame">
+        <img alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__next" type="button" aria-label="Next image"></button>
+    </dialog>
+
+    <script src="js/villaImages.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
