@@ -8,7 +8,7 @@
   --ink: #262a23;
   --muted: #5c6156;
   --line: rgba(38, 42, 35, 0.28);
-  --header: 84px;
+  --header: 104px;
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans: "DM Sans", "Segoe UI", sans-serif;
   --script: "Great Vibes", cursive;
@@ -196,22 +196,12 @@ ul {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: var(--olive);
+  line-height: 0;
 }
 
-.brand span {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-
-.brand__mark {
-  width: 26px;
-  height: 26px;
+.brand img {
+  height: 84px;
+  width: auto;
 }
 
 .header {
@@ -686,7 +676,7 @@ ul {
 }
 
 .footer {
-  padding: 28px 0 32px;
+  padding: 28px 0 22px;
   border-top: 1px solid rgba(38, 42, 35, 0.08);
 }
 
@@ -697,6 +687,25 @@ ul {
   gap: 16px;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.footer .brand img {
+  height: 72px;
+}
+
+.footer__credit {
+  margin: 18px 0 0;
+  padding: 0 16px;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #8b9084;
+}
+
+.footer__heart {
+  color: #c56b5c;
 }
 
 .lightbox {
@@ -928,9 +937,12 @@ ul {
     padding: 72px 0;
   }
 
-  .brand span {
-    font-size: 0.92rem;
-    letter-spacing: 0.16em;
+  :root {
+    --header: 86px;
+  }
+
+  .brand img {
+    height: 64px;
   }
 
   .hero {

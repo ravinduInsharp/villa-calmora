@@ -2,54 +2,50 @@
  * Villa Calmora images
  * --------------------
  * Change a photo by replacing the file in /images and updating `src`.
- * Example:
- *   hero: { src: "images/hero.jpg", alt: "Villa exterior", position: "center 60%" }
- *
- * These files are labeled placeholders. Swap in real photographs of the villa
- * when you have them. Do not add pools, ocean views, or rooms the villa does not have.
+ * `position` controls which part of the photo stays visible when it is cropped.
  *
  * `email` is optional. When set, the contact form opens a draft to that address.
  */
 window.VILLA_IMAGES = {
   hero: {
-    src: "images/hero.svg",
-    alt: "Temporary photo of the villa exterior",
-    position: "center center",
+    src: "images/exterior.jpg",
+    alt: "Villa Calmora porch and tropical garden",
+    position: "center 45%",
   },
   bedroom: {
-    src: "images/bedroom.svg",
-    alt: "Temporary photo of the bedroom",
-    position: "center center",
+    src: "images/bedroom.jpg",
+    alt: "Bedroom corner with an arched mirror and timber shelf",
+    position: "center 42%",
   },
   interior: {
-    src: "images/interior.svg",
-    alt: "Temporary photo of the interior",
-    position: "center center",
+    src: "images/interior.jpg",
+    alt: "Interior landing with pendant lights and a timber door",
+    position: "center 35%",
   },
   bathroom: {
-    src: "images/bathroom.svg",
-    alt: "Temporary photo of the bathroom",
+    src: "images/bathroom.jpg",
+    alt: "Bathroom vanity with a vessel sink and patterned tiles",
     position: "center center",
   },
   exterior: {
-    src: "images/exterior.svg",
-    alt: "Temporary photo of the villa porch",
-    position: "center center",
+    src: "images/exterior.jpg",
+    alt: "Covered porch at Villa Calmora",
+    position: "58% 40%",
   },
   garden: {
-    src: "images/garden.svg",
-    alt: "Temporary photo of the garden",
-    position: "center center",
+    src: "images/exterior.jpg",
+    alt: "Tropical garden at Villa Calmora",
+    position: "18% 75%",
   },
   plants: {
-    src: "images/plants.svg",
-    alt: "Temporary photo of the garden planting",
-    position: "center center",
+    src: "images/exterior.jpg",
+    alt: "Garden trees beside the villa",
+    position: "82% 28%",
   },
   cta: {
-    src: "images/cta.svg",
+    src: "images/exterior.jpg",
     alt: "",
-    position: "center center",
+    position: "72% 40%",
   },
 };
 
