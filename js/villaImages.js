@@ -10,7 +10,7 @@ window.VILLA_IMAGES = {
   hero: {
     src: "images/exterior.jpg",
     alt: "Villa Calmora porch and tropical garden",
-    position: "center 45%",
+    position: "center 72%",
   },
   bedroom: {
     src: "images/bedroom.jpg",
@@ -49,6 +49,13 @@ window.VILLA_IMAGES = {
   },
 };
 
+// Leave a value blank to hide that detail. maps should be a Google Maps link.
 window.VILLA_CONTACT = {
   email: "",
+  maps: "",
+  social: {
+    facebook: "",
+    instagram: "",
+    tiktok: "",
+  },
 };

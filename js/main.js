@@ -100,8 +100,75 @@
     }
   });
 
+  const contact = window.VILLA_CONTACT || {};
+  const mailBlock = document.querySelector("[data-contact-email]");
+  if (contact.email && mailBlock) {
+    const link = mailBlock.querySelector("[data-email-link]");
+    link.href = `mailto:${contact.email}`;
+    link.textContent = contact.email;
+    mailBlock.hidden = false;
+  }
+
+  const mapsLink = document.querySelector("[data-maps]");
+  if (contact.maps && mapsLink) {
+    mapsLink.href = contact.maps;
+    mapsLink.hidden = false;
+  }
+
+  const socialList = document.querySelector(".footer__social");
+  document.querySelectorAll("[data-social]").forEach((link) => {
+    const url = contact.social && contact.social[link.dataset.social];
+    if (!url) return;
+    link.href = url;
+    link.hidden = false;
+    if (socialList) socialList.classList.add("is-on");
+  });
+
   const form = document.querySelector("#enquiry");
   const status = document.querySelector("#form-status");
+  const checkin = form.elements.checkin;
+  const checkout = form.elements.checkout;
+  const now = new Date();
+  const today = [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, "0"),
+    String(now.getDate()).padStart(2, "0"),
+  ].join("-");
+  checkin.min = today;
+  checkout.min = today;
+
+  const markDate = (input) => {
+    input.classList.toggle("is-empty", !input.value);
+  };
+  markDate(checkin);
+  markDate(checkout);
+
+  const syncCheckout = () => {
+    checkout.min = checkin.value || today;
+    markDate(checkin);
+    if (checkin.value && checkout.value && checkout.value < checkin.value) {
+      checkout.value = "";
+      markDate(checkout);
+      checkout.setAttribute("aria-invalid", "true");
+      status.textContent = "Check-out must be on or after check-in.";
+    } else {
+      checkout.removeAttribute("aria-invalid");
+    }
+  };
+
+  checkin.addEventListener("change", syncCheckout);
+  checkout.addEventListener("change", () => {
+    markDate(checkout);
+    if (checkin.value && checkout.value && checkout.value < checkin.value) {
+      checkout.setAttribute("aria-invalid", "true");
+      status.textContent = "Check-out must be on or after check-in.";
+      checkout.value = "";
+      markDate(checkout);
+      return;
+    }
+    checkout.removeAttribute("aria-invalid");
+    if (status.textContent.startsWith("Check-out")) status.textContent = "";
+  });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -109,7 +176,8 @@
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
-    const dates = String(data.get("dates") || "").trim();
+    const arrival = String(data.get("checkin") || "").trim();
+    const departure = String(data.get("checkout") || "").trim();
     const message = String(data.get("message") || "").trim();
     let invalid = false;
 
@@ -125,13 +193,26 @@
       form.elements.email.setAttribute("aria-invalid", "true");
       invalid = true;
     }
+    if (arrival && arrival < today) {
+      checkin.setAttribute("aria-invalid", "true");
+      invalid = true;
+    }
+    if ((departure && departure < today) || (departure && arrival && departure < arrival)) {
+      checkout.setAttribute("aria-invalid", "true");
+      invalid = true;
+    }
     if (invalid) {
-      status.textContent = "Please add your name and a valid email.";
+      status.textContent = "Please check your name, email, and dates.";
       return;
     }
 
-    const contact = window.VILLA_CONTACT || {};
-    const body = [`Name: ${name}`, `Email: ${email}`, dates ? `Dates: ${dates}` : "", message]
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      arrival ? `Check-in: ${arrival}` : "",
+      departure ? `Check-out: ${departure}` : "",
+      message,
+    ]
       .filter(Boolean)
       .join("\n");
 
