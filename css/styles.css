@@ -898,6 +898,19 @@ ul {
   margin-top: 4px;
 }
 
+.form .btn:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.form__bot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .form input[aria-invalid="true"],
 .form textarea[aria-invalid="true"] {
   border-color: #8a4b3a;
@@ -907,6 +920,10 @@ ul {
   min-height: 1.4em;
   color: var(--olive);
   font-size: 0.95rem;
+}
+
+.form__status.is-error {
+  color: #8a4b3a;
 }
 
 .footer {

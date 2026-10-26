@@ -146,11 +146,12 @@
   const syncCheckout = () => {
     checkout.min = checkin.value || today;
     markDate(checkin);
-    if (checkin.value && checkout.value && checkout.value < checkin.value) {
+    if (checkin.value && checkout.value && checkout.value <= checkin.value) {
       checkout.value = "";
       markDate(checkout);
       checkout.setAttribute("aria-invalid", "true");
-      status.textContent = "Check-out must be on or after check-in.";
+      status.classList.add("is-error");
+      status.textContent = "Check-out must be later than check-in.";
     } else {
       checkout.removeAttribute("aria-invalid");
     }
@@ -159,9 +160,10 @@
   checkin.addEventListener("change", syncCheckout);
   checkout.addEventListener("change", () => {
     markDate(checkout);
-    if (checkin.value && checkout.value && checkout.value < checkin.value) {
+    if (checkin.value && checkout.value && checkout.value <= checkin.value) {
       checkout.setAttribute("aria-invalid", "true");
-      status.textContent = "Check-out must be on or after check-in.";
+      status.classList.add("is-error");
+      status.textContent = "Check-out must be later than check-in.";
       checkout.value = "";
       markDate(checkout);
       return;
@@ -170,12 +172,16 @@
     if (status.textContent.startsWith("Check-out")) status.textContent = "";
   });
 
-  form.addEventListener("submit", (event) => {
+  const submitButton = form.querySelector('[type="submit"]');
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     status.textContent = "";
+    status.classList.remove("is-error");
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
     const arrival = String(data.get("checkin") || "").trim();
     const departure = String(data.get("checkout") || "").trim();
     const message = String(data.get("message") || "").trim();
@@ -193,38 +199,58 @@
       form.elements.email.setAttribute("aria-invalid", "true");
       invalid = true;
     }
+    if (!message) {
+      form.elements.message.setAttribute("aria-invalid", "true");
+      invalid = true;
+    }
     if (arrival && arrival < today) {
       checkin.setAttribute("aria-invalid", "true");
       invalid = true;
     }
-    if ((departure && departure < today) || (departure && arrival && departure < arrival)) {
+    if (departure && departure < today) {
+      checkout.setAttribute("aria-invalid", "true");
+      invalid = true;
+    }
+    if (departure && arrival && departure <= arrival) {
       checkout.setAttribute("aria-invalid", "true");
       invalid = true;
     }
     if (invalid) {
-      status.textContent = "Please check your name, email, and dates.";
+      status.classList.add("is-error");
+      status.textContent = "Please check your name, email, message, and dates.";
       return;
     }
 
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      arrival ? `Check-in: ${arrival}` : "",
-      departure ? `Check-out: ${departure}` : "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    form.elements.name.value = name;
+    form.elements.email.value = email;
+    form.elements.phone.value = phone;
+    form.elements.message.value = message;
 
-    if (contact.email) {
-      const href = `mailto:${contact.email}?subject=${encodeURIComponent(
-        "Villa Calmora enquiry"
-      )}&body=${encodeURIComponent(body)}`;
-      window.location.href = href;
-      status.textContent = "Your email draft is opening.";
-      return;
+    submitButton.disabled = true;
+    status.textContent = "Sending your message...";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Request failed");
+      }
+      form.reset();
+      checkin.min = today;
+      checkout.min = today;
+      markDate(checkin);
+      markDate(checkout);
+      status.classList.remove("is-error");
+      status.textContent = "Thank you for contacting Villa Calmora! We'll get back to you shortly.";
+    } catch (error) {
+      status.classList.add("is-error");
+      status.textContent = "Sorry, we couldn't send your message. Please try again or chat with us on WhatsApp.";
+    } finally {
+      submitButton.disabled = false;
     }
-
-    status.textContent = `Thank you, ${name}. Nothing was sent yet — add an email address in js/villaImages.js when you want enquiries to open in your mail app.`;
   });
 })();

@@ -382,7 +382,10 @@
             </div>
             </div>
           </div>
-          <form class="form" id="enquiry" novalidate>
+          <form class="form" id="enquiry" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="9698e5a2-1b1c-4c67-8daa-cf1ff308c39f" />
+            <input type="hidden" name="subject" value="New Villa Calmora Website Inquiry" />
+            <input class="form__bot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" />
             <div class="form__row">
               <label>
                 <span>Name</span>
@@ -393,6 +396,10 @@
                 <input name="email" type="email" autocomplete="email" placeholder="Your email address" required />
               </label>
             </div>
+            <label>
+              <span>Phone / WhatsApp</span>
+              <input name="phone" type="tel" autocomplete="tel" placeholder="Your phone or WhatsApp number" />
+            </label>
             <div class="form__row">
               <label class="field--date">
                 <span>Check-in</span>
@@ -413,7 +420,7 @@
             </div>
             <label>
               <span>Message</span>
-              <textarea name="message" rows="4" placeholder="Let us know any special requests or questions..."></textarea>
+              <textarea name="message" rows="4" placeholder="Let us know any special requests or questions..." required></textarea>
             </label>
             <button class="btn btn--fill" type="submit">Send Message <span class="arrow" aria-hidden="true"></span></button>
             <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
