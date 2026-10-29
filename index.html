@@ -37,11 +37,25 @@
       {
         "@context": "https://schema.org",
         "@type": "VacationRental",
+        "additionalType": "Villa",
+        "identifier": "villa-calmora",
         "name": "Villa Calmora",
         "description": "Discover Villa Calmora, a cozy private villa in Dalawella, Unawatuna. Enjoy a peaceful garden, modern comforts and a relaxing stay near the beach.",
         "url": "https://villacalmora.com/",
-        "image": "https://villacalmora.com/images/villa-exterior-garden.webp",
         "telephone": "+94 77 526 6075",
+        "image": [
+          "https://villacalmora.com/images/bedroom-wide.webp",
+          "https://villacalmora.com/images/bedroom-front.webp",
+          "https://villacalmora.com/images/bedroom-dressing-mirror.webp",
+          "https://villacalmora.com/images/bathroom-full.webp",
+          "https://villacalmora.com/images/bathroom-vanity.webp",
+          "https://villacalmora.com/images/kitchenette.webp",
+          "https://villacalmora.com/images/porch-seating.webp",
+          "https://villacalmora.com/images/villa-exterior-garden.webp",
+          "https://villacalmora.com/images/garden-entrance.webp",
+          "https://villacalmora.com/images/daybed-corner.webp",
+          "https://villacalmora.com/images/window-nook.webp"
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dalawella",
@@ -50,13 +64,46 @@
         },
         "containsPlace": {
           "@type": "Accommodation",
+          "additionalType": "EntirePlace",
           "name": "One-bedroom villa",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "value": 2
+          },
           "numberOfBedrooms": 1,
+          "numberOfBathroomsTotal": 1,
           "bed": {
             "@type": "BedDetails",
             "numberOfBeds": 1,
             "typeOfBed": "King"
-          }
+          },
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "ac",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "wifi",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "kitchen",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "ovenStove",
+              "value": true
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "patio",
+              "value": true
+            }
+          ]
         }
       }
     </script>
