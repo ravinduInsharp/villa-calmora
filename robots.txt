@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://villacalmora.com/sitemap.xml
