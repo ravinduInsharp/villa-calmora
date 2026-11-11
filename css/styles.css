@@ -736,21 +736,54 @@ ul {
 
 .contact__channels {
   display: grid;
-  gap: 22px;
+  gap: 10px;
+  width: max-content;
+  max-width: 100%;
 }
 
-.contact__whatsapp svg {
+.contact__label {
+  margin: 0 0 2px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact__line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 18px 0 16px;
+  border: 1px solid var(--olive);
+  border-radius: 999px;
+  background: var(--olive);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.contact__line span:first-of-type {
+  flex: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.contact__line svg {
   width: 18px;
   height: 18px;
+  flex: none;
 }
 
-.contact__phone {
-  margin: 12px 0 0;
-  font-size: 0.95rem;
+.contact__line:hover {
+  background: var(--olive-deep);
+  border-color: var(--olive-deep);
 }
 
 .contact__hint {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   color: #8b9084;
   font-size: 0.82rem;
 }
@@ -1466,6 +1499,7 @@ ul {
 
   .media img,
   .btn,
+  .contact__line,
   .menu-toggle span,
   .features li {
     transition: none;
