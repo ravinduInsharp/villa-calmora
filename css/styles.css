@@ -737,55 +737,85 @@ ul {
 .contact__channels {
   display: grid;
   gap: 10px;
-  width: max-content;
-  max-width: 100%;
+  width: 100%;
 }
 
 .contact__label {
-  margin: 0 0 2px;
-  font-size: 0.72rem;
+  margin: 0 0 4px;
+  font-family: var(--serif);
+  font-size: 1.45rem;
   font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
 }
 
-.contact__line {
+.contact__row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-height: 48px;
-  padding: 0 18px 0 16px;
-  border: 1px solid var(--olive);
-  border-radius: 999px;
-  background: var(--olive);
-  color: #fff;
+  gap: 10px;
+  min-height: 52px;
+  padding: 8px 14px;
+  border: 1px solid rgba(38, 42, 35, 0.1);
+  border-radius: 14px;
+  background: #fffcf8;
+  color: var(--ink);
   font-size: 0.95rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
-  transition: background 0.25s ease, border-color 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
-.contact__line span:first-of-type {
-  flex: 1;
+.contact__row:hover {
+  border-color: rgba(62, 79, 52, 0.35);
+  background: #fff;
+}
+
+.contact__row:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+.contact__wa {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: #25d366;
+}
+
+.contact__num {
   font-variant-numeric: tabular-nums;
 }
 
-.contact__line svg {
-  width: 18px;
-  height: 18px;
+.contact__badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e7f6ec;
+  color: #1c8a45;
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact__ext {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
   flex: none;
+  color: #9aa093;
 }
 
-.contact__line:hover {
-  background: var(--olive-deep);
-  border-color: var(--olive-deep);
+.contact__chat {
+  width: 100%;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
-.contact__hint {
-  margin: 4px 0 0;
-  color: #8b9084;
-  font-size: 0.82rem;
+.contact__chat svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
 }
 
 .contact__mail {
@@ -1499,7 +1529,7 @@ ul {
 
   .media img,
   .btn,
-  .contact__line,
+  .contact__row,
   .menu-toggle span,
   .features li {
     transition: none;
