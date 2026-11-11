@@ -734,6 +734,11 @@ ul {
   margin-top: 32px;
 }
 
+.contact__channels {
+  display: grid;
+  gap: 22px;
+}
+
 .contact__whatsapp svg {
   width: 18px;
   height: 18px;
